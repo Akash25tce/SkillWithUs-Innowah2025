@@ -1,6 +1,7 @@
 // src/components/Hero.jsx
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import vrImage from "../../Public/VR.webp"; // Add this import statement
 
 function Hero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -38,7 +39,7 @@ function Hero() {
         <div className="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
           <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left pt-32">
-              <h1 
+              <h1
                 className={`text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-6xl transition-all duration-1000 ease-out transform ${
                   isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                 }`}
@@ -46,14 +47,14 @@ function Hero() {
                 <span className="block xl:inline">Enhance Your</span>{' '}
                 <span className="block text-blue-600 xl:inline">Soft Skills with VR</span>
               </h1>
-              <p 
+              <p
                 className={`mt-3 text-base text-gray-600 dark:text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 transition-all duration-1000 delay-300 ease-out transform ${
                   isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                 }`}
               >
                 Practice mock interviews, improve communication skills, and develop leadership abilities in an interactive virtual reality environment. Get real-time feedback and track your progress.
               </p>
-              <div 
+              <div
                 className={`mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start transition-all duration-1000 delay-500 ease-out transform ${
                   isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                 }`}
@@ -83,13 +84,13 @@ function Hero() {
       {/* VR image/illustration */}
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <div className="h-56 w-full sm:h-72 md:h-96 lg:w-full lg:h-full bg-gray-300 dark:bg-gray-800 flex items-center justify-center">
-          <div 
+          <div
             className={`transition-all duration-1000 delay-700 ease-out transform ${
               isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             }`}
           >
             <img
-              src="/VR.webp"
+              src={vrImage} // Change the src to the imported variable
               alt="VR Training"
               className="h-full w-full object-cover"
             />

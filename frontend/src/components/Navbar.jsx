@@ -1,6 +1,7 @@
 // src/components/Navbar.jsx
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import skillIcon from "../../Public/skillicon.png"; // Add this import statement
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,11 +40,11 @@ function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
-              <img src="/src/assets/icon/skillicon.png" className="h-8 w-auto" alt="SkillWithUs Logo" />
+              <img src={skillIcon} className="h-8 w-auto" alt="SkillWithUs Logo" /> {/* Change the src to the imported variable */}
               <span className="ml-2 text-xl font-bold text-gray-900 dark:text-white">SkillWithUs</span>
             </Link>
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-4">
@@ -54,11 +55,11 @@ function Navbar() {
               <Link to="/contact" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md font-medium">Contact Us</Link>
             </div>
           </div>
-          
+
           {/* Right side buttons */}
           <div className="hidden md:flex items-center space-x-4">
             {/* Dark mode toggle */}
-            <button 
+            <button
               onClick={() => setIsDarkMode(!isDarkMode)}
               className="p-2 rounded-full text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
             >
@@ -72,14 +73,14 @@ function Navbar() {
                 </svg>
               )}
             </button>
-            
+
             {/* Login button */}
             <Link to="/login" className="text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 px-4 py-2 rounded-md font-medium">Login</Link>
-            
+
             {/* Sign up button */}
             <Link to="/signup" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-medium transition-colors duration-300">Sign Up</Link>
           </div>
-          
+
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
@@ -122,7 +123,7 @@ function Navbar() {
           </div>
         </div>
       </div>
-      
+
       {/* Mobile menu */}
       <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden bg-white dark:bg-gray-900 shadow-lg`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
