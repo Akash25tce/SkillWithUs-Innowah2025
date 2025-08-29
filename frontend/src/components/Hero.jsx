@@ -89,7 +89,7 @@ function Hero() {
             }`}
           >
             <img
-              src="src/assets/images/VR.webp"
+              src="/VR.webp"
               alt="VR Training"
               className="h-full w-full object-cover"
             />
